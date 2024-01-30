@@ -15,6 +15,7 @@ debtsAndSavings = income * 0.2
 # Print the results
 print(f"""
 Income: {income}
+
 Necessities: {necessities}
 Recreation activities: {recreation}
 Debts and savings: {debtsAndSavings}
