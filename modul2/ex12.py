@@ -3,7 +3,7 @@ b = 5
 c = "ana"
 
 print(f"""Location for a is: {hex(id(a))}
-Location for b is: {hex(b)}
+Location for b is: {hex(id(b))}
 Location for c is: {hex(id(c))}""")
 
 print(f"""
