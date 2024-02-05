@@ -6,9 +6,9 @@ print("Ana", "are", "mere", sep="_")
 print("Pizza", "Party", sep="_")
 
 # With . at the end of each string
-print("Hello", "Python", end=".")
-print("Ana", "are", "mere", end=".")
-print("Pizza", "Party", end=".")
+print("Hello", "Python", end=".\n")
+print("Ana", "are", "mere", end=".\n")
+print("Pizza", "Party", end=".\n")
 
 # Blank line
 print("")
