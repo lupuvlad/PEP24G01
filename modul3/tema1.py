@@ -18,6 +18,7 @@ for option in options:
             break
         else:
             print("The coffee machine accepts only bank-notes of 5 or 10 lei.")
+            break
 else:
     print("This option doesn't exist")
 
