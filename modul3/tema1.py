@@ -1,17 +1,20 @@
 import time
 
-options = [["cappuccino", 4], ["espresso", 3.5]]
+options = [["1", "cappuccino", 4], ["2", "espresso", 3.5]]
 
-for i in range(len(options)):
-    print(f"{i+1}. {options[i][0].title()}... {options[i][1]} lei")
+for i, product in enumerate(options):
+    print(f"{product[0]}. {product[1].capitalize()}... {product[2]} lei")
 
-coffee = input(f"Choose an option ({options[0][0]}/{options[1][0]}): ")
+user_option = input(f"Choose an option ({'/'.join([value[0] for value in options])}): ")
 
 for option in options:
-    if coffee == option[0]:
+    idx = option[0]
+    coffee = option[1]
+    price = option[2]
+    if user_option == idx:
         pay = int(input("Insert only 5 or 10 lei: "))
-        if pay == 5 or pay == 10:
-            change = pay - option[1]
+        if pay in [5, 10]:
+            change = pay - price
             print(f"You will receive {change} lei change.")
             print(f"Preparing your {coffee}...")
             time.sleep(3)
