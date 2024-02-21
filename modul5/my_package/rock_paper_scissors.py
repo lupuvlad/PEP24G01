@@ -41,11 +41,14 @@ combinations = {("rock", "paper"): False, ("paper", "rock"): True,
                 ("paper", "scissors"): False, ("scissors", "paper"): True}
 
 game_on = True
+score_player = 0
+score_pc = 0
 
 while game_on:
     player_choice = input("Type an option rock/paper/scissors or q if you want to quit: ").lower()
     if player_choice == "q":
         game_on = False
+        print(f"{player_name} {score_player}-{score_pc} Computer")
         print("Bye bye!")
         break
     elif player_choice not in choices.keys():
@@ -60,9 +63,11 @@ while game_on:
         result = combinations[(player_choice, pc_choice)]
         if result:
             print(f"{player_name} won!")
+            score_player += 1
             continue
         else:
-            print("Server won! You lose!")
+            print("Computer won! You lose!")
+            score_pc += 1
             continue
 
 
