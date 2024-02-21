@@ -22,4 +22,5 @@ def check_passwd():
         check_passwd()
 
 
-check_passwd()
+if __name__ == "__main__":
+    check_passwd()
