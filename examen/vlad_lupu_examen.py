@@ -84,6 +84,9 @@ class KeyboardIter:
 
 k = KeyboardProductionTimes()
 k.add_produced_keyboards("KB023871", 3210)
+k.add_produced_keyboards("KB023872", 2210)
+k.add_produced_keyboards("KB023878", 2589)
+k.add_produced_keyboards("KB023879", 2300)
 k.add_produced_keyboards("KB023873", 1890)
 k.add_produced_keyboards("KB023875", 1982)
 print(k.calculate_average_prod_time())
@@ -91,4 +94,4 @@ print(k.produced_keyboards)
 
 with open("keyboards.txt", "w") as f:
     for keyboard in k:
-        f.write(str(keyboard))
+        f.write(f"{keyboard} \n")
